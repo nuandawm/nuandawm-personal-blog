@@ -75,6 +75,7 @@ const gatsbyConfig = (userConfig: SiteConfig): GatsbyConfig => {
         options: {
           name: "posts",
           path: config.contentDir || path.join(__dirname, "../content"),
+          ignore: [`**/draft-*`]
         },
       },
       {

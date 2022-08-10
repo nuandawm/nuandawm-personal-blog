@@ -26,9 +26,10 @@ const PostTemplate = ({
         <SEO post={post} />
         <Article post={post} />
         <AuthorSegment />
-        <RelatedPosts
-          list={pageContext.relatedPosts.map(Types.jsonPostIntoPost)}
-        />
+        { pageContext.relatedPosts && pageContext.relatedPosts.length > 0
+          && <RelatedPosts
+            list={pageContext.relatedPosts.map(Types.jsonPostIntoPost)}
+          />}
       </Wrapper>
     </Layout>
   );
