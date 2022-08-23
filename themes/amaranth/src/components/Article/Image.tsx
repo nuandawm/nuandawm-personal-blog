@@ -62,7 +62,7 @@ export const FigCaptionCss = css`
 const FigCaption = styled.figcaption`
   ${styles.Caption}
 
-  color: var(--color-grey-700);
+  color: var(--color-grey-600);
 `;
 
 type ImageProps = {

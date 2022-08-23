@@ -5,7 +5,7 @@ import { PrimaryLink, AnimatedLink } from "../Links";
 
 export const HomeButton = styled(PrimaryLink)`
   text-decoration: none;
-  color: var(--color-text);
+  color: var(--color-inverted-text);
 
   display: grid;
   grid-auto-flow: column;
@@ -40,7 +40,7 @@ export const SiteTitle = styled.p`
 export const NavButton = styled(AnimatedLink)`
   ${styles.ButtonLabel}
 
-  color: var(--color-text);
+  color: var(--color-primary-100);
 
   &:after {
     margin: 8px 0 0 0;

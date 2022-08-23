@@ -23,6 +23,9 @@ const LayoutGrid = styled.div`
   @media (max-width: ${constants.breakpoints.sm}) {
     gap: 40px;
   }
+  
+  background-color: var(--color-inverted-background);
+  color: var(--color-inverted-text);
 `;
 
 type MainLayoutProps = {

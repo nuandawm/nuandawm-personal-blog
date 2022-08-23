@@ -2,7 +2,12 @@ module.exports = (userConfig) => ({
   plugins: [
     {
       resolve: "gatsby-theme-advanced",
-      options: userConfig,
+      options: {
+        ...userConfig,
+        website: {
+          logoUrl: "/logos/logo.png",
+        },
+      },
     },
   ],
 });

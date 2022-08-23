@@ -2,15 +2,16 @@ import { createGlobalStyle, css } from "styled-components";
 
 const Colors = css`
   :root {
-    --color-primary-100: #e88896;
-    --color-primary-200: #e47485;
-    --color-primary-300: #e06073;
-    --color-primary-400: #dc4c62;
-    --color-primary: #d83850;
-    --color-primary-600: #c23248;
-    --color-primary-700: #ad2d40;
-    --color-primary-800: #972738;
-    --color-primary-900: #822230;
+    /* Blue 50 material palette */
+    --color-primary-100: #BBDEFB;
+    --color-primary-200: #90CAF9;
+    --color-primary: #61dafb;
+    --color-primary-400: #42A5F5;
+    --color-primary-500: #2196F3;
+    --color-primary-600: #1E88E5;
+    --color-primary-700: #1976D2;
+    --color-primary-800: #1565C0;
+    --color-primary-900: #0D47A1;
 
     --color-grey-100: #f7f7f7;
     --color-grey-200: #dbdbdb;
@@ -25,7 +26,7 @@ const Colors = css`
     --color-text: #000000;
     --color-inverted-text: #ffffff;
     --color-background: #ffffff;
-    --color-inverted-background: #000000;
+    --color-inverted-background: #212121;
   }
 `;
 
