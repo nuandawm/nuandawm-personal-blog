@@ -4,7 +4,14 @@ module.exports = {
     {
       resolve: "gatsby-theme-amaranth",
       options: {
-        iconPath: "/favicon.svg"
+        assetDir: "./static/",
+        iconList: [
+          {
+            src: "/logos/G2_logo.svg",
+            sizes: "16x16",
+            type: "image/svg",
+          }
+        ]
       },
     },
   ],

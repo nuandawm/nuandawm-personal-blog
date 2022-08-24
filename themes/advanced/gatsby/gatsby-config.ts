@@ -86,8 +86,7 @@ const gatsbyConfig = (userConfig: SiteConfig): GatsbyConfig => {
             placeholder: "blurred",
             backgroundColor: "transparent",
           },
-          failOnError: true,
-          icon: "static/logos/G2_logo.svg"
+          failOnError: true
         },
       },
       "gatsby-transformer-sharp",
