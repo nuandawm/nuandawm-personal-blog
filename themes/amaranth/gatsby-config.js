@@ -3,10 +3,7 @@ module.exports = (userConfig) => ({
     {
       resolve: "gatsby-theme-advanced",
       options: {
-        ...userConfig,
-        website: {
-          logoUrl: "/logos/logo.png",
-        },
+        ...userConfig
       },
     },
   ],

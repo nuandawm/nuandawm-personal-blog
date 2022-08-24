@@ -3,7 +3,9 @@ module.exports = {
     "gatsby-plugin-styled-components",
     {
       resolve: "gatsby-theme-amaranth",
-      options: {},
+      options: {
+        iconPath: "/favicon.svg"
+      },
     },
   ],
 };
