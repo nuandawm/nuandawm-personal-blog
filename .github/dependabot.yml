@@ -15,13 +15,3 @@ updates:
     directory: "/themes/amaranth/"
     schedule:
       interval: "monthly"
-
-  - package-ecosystem: "npm"
-    directory: "/examples/advanced-demo/"
-    schedule:
-      interval: "monthly"
-
-  - package-ecosystem: "npm"
-    directory: "/examples/amaranth-demo/"
-    schedule:
-      interval: "monthly"

@@ -47,7 +47,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        project: [".", "./examples/amaranth-demo", "./examples/advanced-demo"]
+        project: ["."]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2

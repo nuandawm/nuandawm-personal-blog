@@ -2,9 +2,7 @@
   "private": true,
   "workspaces": [
     "themes/amaranth",
-    "themes/advanced",
-    "examples/amaranth-demo",
-    "examples/advanced-demo"
+    "themes/advanced"
   ],
   "name": "gatsby-starter-advanced",
   "description": "GatsbyJS starter that includes examples for advanced use cases.",
