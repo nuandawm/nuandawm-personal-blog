@@ -24,10 +24,10 @@ const AuthorSegment = (): JSX.Element | null => {
           </S.AboutText>
         </S.Info>
       </S.Main>
-      <S.Contact>
+      {/* <S.Contact>
         <S.ShareLabel>Find me on</S.ShareLabel>
         <S.TightUserLinks />
-      </S.Contact>
+      </S.Contact> */}
       <S.Separator />
     </S.Wrapper>
   );

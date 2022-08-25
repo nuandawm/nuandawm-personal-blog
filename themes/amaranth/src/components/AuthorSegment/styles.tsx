@@ -30,7 +30,7 @@ export const Info = styled.div`
   display: grid;
   grid-gap: 16px;
 
-  align-content: flex-start;
+  align-content: center;
 
   justify-content: flex-start;
 

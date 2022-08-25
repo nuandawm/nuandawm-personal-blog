@@ -11,7 +11,7 @@ import RelatedPosts from "../../../components/RelatedPosts";
 const Wrapper = styled.div`
   display: grid;
 
-  grid-gap: 60px;
+  grid-gap: 30px;
 `;
 
 const PostTemplate = ({

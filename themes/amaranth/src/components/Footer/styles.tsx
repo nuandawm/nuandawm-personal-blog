@@ -20,6 +20,7 @@ export const Info = styled.div`
   gap: 8px;
   justify-items: center;
   align-items: center;
+  padding: 0 16px;
 
   /* Override link colors to improve color contrast */
   & a {
