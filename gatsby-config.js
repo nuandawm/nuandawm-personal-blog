@@ -1,3 +1,5 @@
+require("dotenv").config({ path: '.env' })
+
 module.exports = {
   plugins: [
     "gatsby-plugin-styled-components",
@@ -47,7 +49,7 @@ module.exports = {
       resolve: "gatsby-source-contentful",
       options: {
         spaceId: "qhr9jqw5jvsf",
-        accessToken: 'bqAqVfEEq0ETKzqKWvtU0QpJ5p92DiQKn-s_3totUJg',
+        accessToken: process.env.CONTENTFUL_API_KEY,
       }
     }
   ],

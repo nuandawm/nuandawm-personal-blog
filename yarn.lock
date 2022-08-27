@@ -4127,27 +4127,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storyblok/js@npm:^1.7.2":
-  version: 1.7.2
-  resolution: "@storyblok/js@npm:1.7.2"
-  dependencies:
-    storyblok-js-client: ^4.5.6
-  checksum: 039036ef126719591dab5a42913d8de12e894c5f096985a459e6c40de75074991aee513e5d72afc3444eb40d68c9a16f97f337df728439fedb340457ad1afe2a
-  languageName: node
-  linkType: hard
-
-"@storyblok/react@npm:^1.1.0":
-  version: 1.1.5
-  resolution: "@storyblok/react@npm:1.1.5"
-  dependencies:
-    "@storyblok/js": ^1.7.2
-  peerDependencies:
-    react: ^17.0.0 || ^18.0.0
-    react-dom: ^17.0.0 || ^18.0.0
-  checksum: aace3983371d62fa1a62f1a3eeb71cb874ae17c56477c3f0f7334b2b70ed923cd30e21fdedef355c0c83ca9e5acaf0bab53fb21f560abf95df56faa8401635ae
-  languageName: node
-  linkType: hard
-
 "@styled-icons/boxicons-logos@npm:^10.38.0":
   version: 10.38.0
   resolution: "@styled-icons/boxicons-logos@npm:10.38.0"
@@ -9741,6 +9720,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dotenv@npm:^16.0.1":
+  version: 16.0.1
+  resolution: "dotenv@npm:16.0.1"
+  checksum: f459ffce07b977b7f15d8cc4ee69cdff77d4dd8c5dc8c85d2d485ee84655352c2415f9dd09d42b5b5985ced3be186130871b34e2f3e2569ebc72fbc2e8096792
+  languageName: node
+  linkType: hard
+
 "dotenv@npm:^7.0.0":
   version: 7.0.0
   resolution: "dotenv@npm:7.0.0"
@@ -12562,27 +12548,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-source-filesystem@npm:^4.0.0, gatsby-source-filesystem@npm:^4.21.1":
-  version: 4.21.1
-  resolution: "gatsby-source-filesystem@npm:4.21.1"
-  dependencies:
-    "@babel/runtime": ^7.15.4
-    chokidar: ^3.5.3
-    file-type: ^16.5.4
-    fs-extra: ^10.1.0
-    gatsby-core-utils: ^3.21.0
-    md5-file: ^5.0.0
-    mime: ^2.5.2
-    pretty-bytes: ^5.4.1
-    progress: ^2.0.3
-    valid-url: ^1.0.9
-    xstate: 4.32.1
-  peerDependencies:
-    gatsby: ^4.0.0-next
-  checksum: c9212dfb66ba41b8268328a22d121486e455f2da5f465b45e9804187bc823deebac63e5c131abde4b8f4520f95a789b8823de2239d402bab898c2578269dc37f
-  languageName: node
-  linkType: hard
-
 "gatsby-source-filesystem@npm:^4.17.0":
   version: 4.17.0
   resolution: "gatsby-source-filesystem@npm:4.17.0"
@@ -12605,17 +12570,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gatsby-source-storyblok@npm:^4.1.0":
-  version: 4.1.0
-  resolution: "gatsby-source-storyblok@npm:4.1.0"
+"gatsby-source-filesystem@npm:^4.21.1":
+  version: 4.21.1
+  resolution: "gatsby-source-filesystem@npm:4.21.1"
   dependencies:
-    "@storyblok/react": ^1.1.0
-    gatsby-source-filesystem: ^4.0.0
-    json-stringify-safe: ^5.0.1
-    storyblok-js-client: ^4.5.2
+    "@babel/runtime": ^7.15.4
+    chokidar: ^3.5.3
+    file-type: ^16.5.4
+    fs-extra: ^10.1.0
+    gatsby-core-utils: ^3.21.0
+    md5-file: ^5.0.0
+    mime: ^2.5.2
+    pretty-bytes: ^5.4.1
+    progress: ^2.0.3
+    valid-url: ^1.0.9
+    xstate: 4.32.1
   peerDependencies:
-    gatsby: ^3.0.0 || ^4.0.0
-  checksum: 009acb8d01afd6028e9ca598d0d1b11cfe00b6e7cde75837446cfaefdc16578cb3ec49460357f1857d844dda38c6a8353c43ce9ed078c204e8c8e1ef8d7167be
+    gatsby: ^4.0.0-next
+  checksum: c9212dfb66ba41b8268328a22d121486e455f2da5f465b45e9804187bc823deebac63e5c131abde4b8f4520f95a789b8823de2239d402bab898c2578269dc37f
   languageName: node
   linkType: hard
 
@@ -12639,6 +12611,7 @@ __metadata:
     babel-plugin-styled-components: ^2.0.7
     cypress: ^10.2.0
     cypress-axe: ^1.0.0
+    dotenv: ^16.0.1
     eslint: ^8.18.0
     eslint-config-airbnb: ^19.0.4
     eslint-config-airbnb-typescript: ^17.0.0
@@ -12907,7 +12880,6 @@ __metadata:
     gatsby-remark-prismjs: ^6.17.0
     gatsby-remark-responsive-iframe: ^5.17.0
     gatsby-source-filesystem: ^4.17.0
-    gatsby-source-storyblok: ^4.1.0
     gatsby-theme-advanced: "*"
     gatsby-transformer-remark: ^5.17.0
     gatsby-transformer-sharp: ^4.17.0
@@ -24628,15 +24600,6 @@ __metadata:
   version: 1.5.0
   resolution: "statuses@npm:1.5.0"
   checksum: c469b9519de16a4bb19600205cffb39ee471a5f17b82589757ca7bd40a8d92ebb6ed9f98b5a540c5d302ccbc78f15dc03cc0280dd6e00df1335568a5d5758a5c
-  languageName: node
-  linkType: hard
-
-"storyblok-js-client@npm:^4.5.2, storyblok-js-client@npm:^4.5.6":
-  version: 4.5.6
-  resolution: "storyblok-js-client@npm:4.5.6"
-  peerDependencies:
-    axios: ^0.27.2
-  checksum: c0875d95e6faa8ebfe39882ba5a5a5055c98de05b7c9afbff0eed4555e84f9fd9d8cd56e9d7d476c215b80f4690bc7570135a2a89a1b99c1e248fdf0df7e5cf3
   languageName: node
   linkType: hard
 
