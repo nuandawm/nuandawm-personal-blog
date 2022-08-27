@@ -20,6 +20,9 @@ const Navigation = (): JSX.Element => {
         <S.NavButton noBasePath to="/about">
           About
         </S.NavButton>
+        <S.NavButton noBasePath to="/professional-cv">
+          PRO CV
+        </S.NavButton>
       </S.NavGrid>
     </S.Wrapper>
   );

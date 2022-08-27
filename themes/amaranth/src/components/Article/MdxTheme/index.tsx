@@ -2,8 +2,6 @@ import React from "react";
 
 import { MDXProvider } from "@mdx-js/react";
 
-import { Types } from "gatsby-theme-advanced";
-
 import * as TextComponents from "./Text";
 import * as CodeComponents from "./Code";
 import * as TableComponents from "./Table";
@@ -11,7 +9,7 @@ import * as ListComponents from "./List";
 import * as MiscComponents from "./Misc";
 
 // Camponent mapping for the MDX render to use
-const getComponentMapping = (post: Types.Post) => {
+const getComponentMapping = (post: {slug: string}) => {
   // Generate heading components with correct hashlinks
   const headings = TextComponents.createHeadings(post.slug);
 
@@ -51,7 +49,7 @@ const getComponentMapping = (post: Types.Post) => {
 
 type MDXThemeProps = {
   children: React.ReactNode;
-  post: Types.Post;
+  post: {slug: string};
 };
 
 const MDXTheme = ({ children, post }: MDXThemeProps): JSX.Element => (

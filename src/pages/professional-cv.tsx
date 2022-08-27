@@ -28,7 +28,7 @@ type ProfessionalCVPageProps = {
   }
 }
 
-const ExamplePage = ({data}: ProfessionalCVPageProps): JSX.Element => {
+const ProfessionalCVPage = ({data}: ProfessionalCVPageProps): JSX.Element => {
   const config = useConfig();
 
   const workExperiences: WorkExperienceI[] = data.allContentfulWorkExperience.edges.map(el => el.node);
@@ -44,10 +44,10 @@ const ExamplePage = ({data}: ProfessionalCVPageProps): JSX.Element => {
   );
 };
 
-export default ExamplePage;
+export default ProfessionalCVPage;
 
 export const query = graphql`
-  query WorkExperienceQuery1 {
+  query WorkExperienceQuery {
     allContentfulWorkExperience(sort: {fields: from, order: DESC}) {
       edges {
         node {
