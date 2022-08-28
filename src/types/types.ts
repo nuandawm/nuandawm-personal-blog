@@ -10,3 +10,10 @@ export type WorkExperienceI = {
     raw: string
   }
 }
+
+export type DigitalSkillAreaI = {
+  "id": string,
+  "contentful_id": string,
+  "areaName": string,
+  "skills": string[]
+}
