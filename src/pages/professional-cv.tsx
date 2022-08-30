@@ -117,7 +117,7 @@ const ProfessionalCVPage = ({data}: ProfessionalCVPageProps): JSX.Element => {
               ))}
             </CleanList>
             <p>
-              Bachelor of Science<br/>
+              Physics - BSc<br/>
               Senior Front End Developer<br/>
               Mid Back End Developer<br/>
               <i>Visa sponsorship required</i>
