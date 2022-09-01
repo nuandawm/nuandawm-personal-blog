@@ -11,6 +11,7 @@ const Wrapper = styled.div`
   max-width: 600px;
   background-color: var(--color-grey-800);
   border-radius: 10px;
+  margin-bottom: 30px;
 `
 
 const DatesContainer = styled.p`

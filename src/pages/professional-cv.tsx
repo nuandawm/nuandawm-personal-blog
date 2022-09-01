@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { graphql } from 'gatsby';
 import { useConfig } from 'gatsby-theme-advanced';
 import Layout from 'gatsby-theme-amaranth/src/layouts';
@@ -11,6 +11,7 @@ import WorkExperience from '../components/WorkExperience';
 import HorizontalRule from '../components/HorizontalRule';
 import CleanList from '../components/CleanList';
 import DigitalSkillArea from '../components/DigitalSkillArea';
+import TimeProgressionComponent from '../components/TimeProgressionComponent';
 
 const Wrapper = styled.main`
   display: grid;
@@ -51,29 +52,6 @@ const DigitalSkillsWrapper = styled.div`
 const WorkExperienceWrapper = styled.div`
   
 `
-
-const SingleWorkExperienceWrapper = styled.div`
-  display: flex;
-  padding-right: 10px;
-  justify-content: space-evenly;
-  margin-bottom: 10px;
-  
-  .we-timeline {
-    flex-grow: 1;
-    display: flex;
-    padding-top: 40px;
-    padding-right: 20px;
-    justify-content: flex-end;
-  }
-
-  svg > circle {
-    fill: var(--color-grey-300)
-  }
-`
-
-const FullCircleSVG = ({cx, cy, r}: {cx: number, cy: number, r: number}) => (<svg width={20} height={20} xmlns="http://www.w3.org/2000/svg">
-  <circle cx={cx} cy={cy} r={r}/>
-</svg>)
 
 type ProfessionalCVPageProps = {
   data: {
@@ -134,12 +112,12 @@ const ProfessionalCVPage = ({data}: ProfessionalCVPageProps): JSX.Element => {
             <h4>Work experience</h4>
             <HorizontalRule spaced />
             {workExperiences.map(
-              we => <SingleWorkExperienceWrapper key={`key-${we.id}`}>
-                <div className="we-timeline">
-                  <FullCircleSVG cx={10} cy={10} r={10} />
-                </div>
-                <WorkExperience item={we} />
-              </SingleWorkExperienceWrapper>)}
+              (we, i, list) =>
+                <TimeProgressionComponent key={`key-${we.id}`}
+                                          isFirst={i === 0}
+                                          isLast={i === list.length - 1}>
+                  <WorkExperience item={we} />
+                </TimeProgressionComponent>)}
           </WorkExperienceWrapper>
         </Wrapper>
       </LayoutWidthContainer>
