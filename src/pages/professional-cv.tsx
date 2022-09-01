@@ -104,7 +104,7 @@ const ProfessionalCVPage = ({data}: ProfessionalCVPageProps): JSX.Element => {
           <HeadlineWrapper>
             <h1>Giuliano De Rossi</h1>
             <h2>Senior Front End Developer - BSc</h2>
-            <HorizontalRule/>
+            <HorizontalRule spaced/>
           </HeadlineWrapper>
 
           <PersonalInformationWrapper>

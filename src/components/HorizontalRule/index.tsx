@@ -3,8 +3,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const HorizontalRule = styled.hr`
-  margin-top: ${props => props.spaced ? '10px' : '0'}
-  margin-bottom: ${props => props.spaced ? '20px' : '0'}
+  margin-top: ${props => props.spaced ? '5px' : '0'};
+  margin-bottom: ${props => props.spaced ? '20px' : '0'};
 `
 
 // TODO Find out why the spaced prop is not working
