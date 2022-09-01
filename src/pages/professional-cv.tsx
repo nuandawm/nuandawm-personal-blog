@@ -46,18 +46,6 @@ const personalInfoData = [{
   value: 'derossi.giuliano@gmail.com'
 }]
 
-const DigitalSkillsWrapper = styled.div`
-  
-`
-
-const WorkExperienceWrapper = styled.div`
-  
-`
-
-const EducationAndTrainingWrapper = styled.div`
-
-`
-
 type ProfessionalCVPageProps = {
   data: {
     allContentfulWorkExperience: {
@@ -113,13 +101,13 @@ const ProfessionalCVPage = ({data}: ProfessionalCVPageProps): JSX.Element => {
             </p>
           </PersonalInformationWrapper>
 
-          <DigitalSkillsWrapper>
+          <div>
             <h4>Digital skills</h4>
             <HorizontalRule spaced />
             {digitalSkillsAreas.map(dsa => <DigitalSkillArea item={dsa} key={`key-${dsa.id}`} />)}
-          </DigitalSkillsWrapper>
+          </div>
 
-          <WorkExperienceWrapper>
+          <div>
             <h4>Work experience</h4>
             <HorizontalRule spaced />
             {workExperiences.map(
@@ -129,13 +117,40 @@ const ProfessionalCVPage = ({data}: ProfessionalCVPageProps): JSX.Element => {
                                           isLast={i === list.length - 1}>
                   <WorkExperience item={we} />
                 </TimeProgressionComponent>)}
-          </WorkExperienceWrapper>
+          </div>
 
-          <EducationAndTrainingWrapper>
+          <div>
             <h4>Education and training</h4>
             <HorizontalRule spaced />
             {educationAndTrainings.map(eat => <EducationAndTraining item={eat} key={`key-${eat.id}`} />)}
-          </EducationAndTrainingWrapper>
+          </div>
+
+          <div>
+            <h4>Language skills</h4>
+            <HorizontalRule spaced />
+            <p>
+              Mother tongue(s): <b>ITALIAN</b>
+            </p>
+          </div>
+
+          <div>
+            <h4>Communication and interpersonal skills</h4>
+            <HorizontalRule spaced />
+            <p>
+              Good communication skills gained through my experience as a teacher in IT classes and through a working
+              in teams over the years.
+            </p>
+          </div>
+
+          <div>
+            <h4>Hobbies and interests</h4>
+            <HorizontalRule spaced />
+            <p>
+              Lindy Hop and Balboa Swing dancer.<br/>
+              Fan of any Physics and Mathematics topics.<br/>
+              Former bass guitar player.
+            </p>
+          </div>
         </Wrapper>
       </LayoutWidthContainer>
     </Layout>
