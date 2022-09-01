@@ -6,12 +6,13 @@ import { LayoutWidthContainer } from 'gatsby-theme-amaranth';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 
-import { DigitalSkillAreaI, WorkExperienceI } from '../types';
+import { DigitalSkillAreaI, EducationAndTrainingI, WorkExperienceI } from '../types';
 import WorkExperience from '../components/WorkExperience';
 import HorizontalRule from '../components/HorizontalRule';
 import CleanList from '../components/CleanList';
 import DigitalSkillArea from '../components/DigitalSkillArea';
 import TimeProgressionComponent from '../components/TimeProgressionComponent';
+import EducationAndTraining from '../components/EducationAndTraining';
 
 const Wrapper = styled.main`
   display: grid;
@@ -53,6 +54,10 @@ const WorkExperienceWrapper = styled.div`
   
 `
 
+const EducationAndTrainingWrapper = styled.div`
+
+`
+
 type ProfessionalCVPageProps = {
   data: {
     allContentfulWorkExperience: {
@@ -64,6 +69,11 @@ type ProfessionalCVPageProps = {
       edges: Array<{
         node: DigitalSkillAreaI
       }>
+    },
+    allContentfulEducationAndTraining: {
+      edges: Array<{
+        node: EducationAndTrainingI
+      }>
     }
   }
 }
@@ -73,6 +83,7 @@ const ProfessionalCVPage = ({data}: ProfessionalCVPageProps): JSX.Element => {
 
   const workExperiences: WorkExperienceI[] = data.allContentfulWorkExperience.edges.map(el => el.node)
   const digitalSkillsAreas: DigitalSkillAreaI[] = data.allContentfulDigitalSkillArea.edges.map(el => el.node)
+  const educationAndTrainings: EducationAndTrainingI[] = data.allContentfulEducationAndTraining.edges.map(el => el.node)
 
   return (
     <Layout>
@@ -119,6 +130,12 @@ const ProfessionalCVPage = ({data}: ProfessionalCVPageProps): JSX.Element => {
                   <WorkExperience item={we} />
                 </TimeProgressionComponent>)}
           </WorkExperienceWrapper>
+
+          <EducationAndTrainingWrapper>
+            <h4>Education and training</h4>
+            <HorizontalRule spaced />
+            {educationAndTrainings.map(eat => <EducationAndTraining item={eat} key={`key-${eat.id}`} />)}
+          </EducationAndTrainingWrapper>
         </Wrapper>
       </LayoutWidthContainer>
     </Layout>
@@ -132,13 +149,13 @@ export const query = graphql`
     allContentfulWorkExperience(sort: {fields: from, order: DESC}) {
       edges {
         node {
-          company
+          id
           contentful_id
+          company
           country
           from(formatString: "DD/MM/YYYY")
-          id
-          role
           to(formatString: "DD/MM/YYYY")
+          role
           description {
             raw
           }
@@ -152,6 +169,22 @@ export const query = graphql`
           contentful_id
           id
           skills
+        }
+      }
+    }
+    allContentfulEducationAndTraining(sort: {fields: from, order: DESC}) {
+      edges {
+        node {
+          id
+          contentful_id
+          country
+          from(formatString: "DD/MM/YYYY")
+          to(formatString: "DD/MM/YYYY")
+          name
+          institution
+          description {
+            raw
+          }
         }
       }
     }

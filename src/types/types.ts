@@ -17,3 +17,16 @@ export type DigitalSkillAreaI = {
   "areaName": string,
   "skills": string[]
 }
+
+export type EducationAndTrainingI = {
+  "id": string,
+  "contentful_id": string,
+  "country": string,
+  "from": string,
+  "name": string,
+  "to": string,
+  "institution": string,
+  "description": {
+    "raw": string
+  }
+}

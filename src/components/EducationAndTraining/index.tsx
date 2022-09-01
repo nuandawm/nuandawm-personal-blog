@@ -1,7 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 import { renderRichText, RenderRichTextData } from 'gatsby-source-contentful/rich-text'
-import { WorkExperienceI } from '../../types';
+import { EducationAndTrainingI } from '../../types';
 import HorizontalRule from '../HorizontalRule';
 
 const Wrapper = styled.div`
@@ -34,17 +34,17 @@ const DescriptionContainer = styled.div`
   }
 `
 
-type WorkExperienceProps = {
-  item: WorkExperienceI
+type EducationAndTrainingProps = {
+  item: EducationAndTrainingI
 }
 
-const WorkExperience = ({ item }: WorkExperienceProps) => (<Wrapper>
+const EducationAndTraining = ({ item }: EducationAndTrainingProps) => (<Wrapper>
   <DatesContainer>
     {item.from} - {item.to}
   </DatesContainer>
   <RoleCompanyContainer>
-    <b>{item.role}</b><br/>
-    Company: {item.company}
+    <b>{item.name}</b><br/>
+    {item.institution}
   </RoleCompanyContainer>
   <HorizontalRule/>
   <DescriptionContainer>
@@ -52,4 +52,4 @@ const WorkExperience = ({ item }: WorkExperienceProps) => (<Wrapper>
   </DescriptionContainer>
 </Wrapper>)
 
-export default WorkExperience
+export default EducationAndTraining
