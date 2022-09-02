@@ -30,23 +30,9 @@ const TimeProgressionComponent: React.FC<TimeProgressionComponentProps> = ({
   const timeProgressionContainerRef: React.RefObject<HTMLDivElement> = useRef(null);
   const [timelineHeight, setTimelineHeight] = useState(0);
 
-  // Create a resize observer to set the timeline height when the container resizes
-  const resizeObserver = useRef(new ResizeObserver(entries => {
-    entries.forEach(entry => {
-      setTimelineHeight(entry.contentRect.height)
-    })
-  }));
-
   // Observe the container (and disconnect the observer on component destroy)
   useEffect(() => {
-    let tempRef: ResizeObserver;
-    if (timeProgressionContainerRef.current) {
-      tempRef = resizeObserver.current
-      resizeObserver.current.observe(timeProgressionContainerRef.current)
-    }
-    return () => {
-      tempRef.disconnect()
-    }
+    setTimelineHeight(timeProgressionContainerRef.current?.clientHeight || 10)
   }, []);
 
   return <Wrapper>
