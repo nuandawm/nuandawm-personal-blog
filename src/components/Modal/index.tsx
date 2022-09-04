@@ -31,6 +31,14 @@ const ModalBody = styled.div`
   border-left: 1px solid var(--color-grey-600);
   border-right: 1px solid var(--color-grey-600);
   flex-grow: 1;
+  
+  p {
+    padding: 5px 0;
+  }
+  
+  li {
+    margin-left: 1em;
+  }
 `
 
 const ModalFooter = styled.div`
