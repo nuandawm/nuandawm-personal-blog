@@ -8,6 +8,9 @@ export type WorkExperienceI = {
   "to": string,
   "description": {
     raw: string
+  },
+  "longDescription": {
+    raw: string
   }
 }
 

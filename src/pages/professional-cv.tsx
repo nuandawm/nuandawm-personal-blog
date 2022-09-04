@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo, useState } from 'react';
 import { graphql } from 'gatsby';
 import { useConfig } from 'gatsby-theme-advanced';
 import Layout from 'gatsby-theme-amaranth/src/layouts';
@@ -13,6 +13,7 @@ import CleanList from '../components/CleanList';
 import DigitalSkillArea from '../components/DigitalSkillArea';
 import TimeProgressionComponent from '../components/TimeProgressionComponent';
 import EducationAndTraining from '../components/EducationAndTraining';
+import Modal, { ModalContext, ModalData } from '../components/Modal';
 
 const Wrapper = styled.main`
   display: grid;
@@ -73,9 +74,24 @@ const ProfessionalCVPage = ({data}: ProfessionalCVPageProps): JSX.Element => {
   const digitalSkillsAreas: DigitalSkillAreaI[] = data.allContentfulDigitalSkillArea.edges.map(el => el.node)
   const educationAndTrainings: EducationAndTrainingI[] = data.allContentfulEducationAndTraining.edges.map(el => el.node)
 
-  return (
+  const [isOpen, setIsOpen] = useState(false);
+  const [modalContent, setModalContent] = useState<React.FC<any>>(() => null);
+  const initialModalData = useMemo(() => ({
+    isOpen,
+    content: modalContent,
+    open: (content) => {
+      setModalContent(content)
+      setIsOpen(true)
+    },
+    close: () => {
+      setIsOpen(false)
+    }
+  } as ModalData), [isOpen, modalContent]);
+
+  return (<ModalContext.Provider value={initialModalData}>
     <Layout>
       <Helmet title={`Professional CV | ${config.website.title}`} />
+      <Modal />
       <LayoutWidthContainer>
         <Wrapper>
           <HeadlineWrapper>
@@ -154,7 +170,7 @@ const ProfessionalCVPage = ({data}: ProfessionalCVPageProps): JSX.Element => {
         </Wrapper>
       </LayoutWidthContainer>
     </Layout>
-  );
+  </ModalContext.Provider>);
 };
 
 export default ProfessionalCVPage;
@@ -172,6 +188,9 @@ export const query = graphql`
           to(formatString: "DD/MM/YYYY")
           role
           description {
+            raw
+          }
+          longDescription {
             raw
           }
         }

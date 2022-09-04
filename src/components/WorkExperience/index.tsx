@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useCallback, useContext } from 'react';
 import styled from 'styled-components';
+import { styles } from 'gatsby-theme-amaranth';
 import { renderRichText, RenderRichTextData } from 'gatsby-source-contentful/rich-text'
 import { WorkExperienceI } from '../../types';
 import HorizontalRule from '../HorizontalRule';
+import { ModalContext } from '../Modal';
 
 const Wrapper = styled.div`
   display: flex;
@@ -34,22 +36,60 @@ const DescriptionContainer = styled.div`
   }
 `
 
+const ReadMoreButtonWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  
+  button {
+    all: unset;
+
+    ${styles.ButtonLabel}
+    
+    cursor: pointer;
+  }
+`
+
 type WorkExperienceProps = {
   item: WorkExperienceI
 }
 
-const WorkExperience = ({ item }: WorkExperienceProps) => (<Wrapper>
-  <DatesContainer>
-    {item.from} - {item.to}
-  </DatesContainer>
-  <RoleCompanyContainer>
-    <b>{item.role}</b><br/>
-    Company: {item.company}
-  </RoleCompanyContainer>
-  <HorizontalRule/>
-  <DescriptionContainer>
-    {item.description.raw && renderRichText(item.description as RenderRichTextData<any>)}
-  </DescriptionContainer>
-</Wrapper>)
+const LongDescriptionWrapper = styled.div`
+  
+`
+
+type LongDescriptionModalContentProps = {
+  content: React.ReactNode
+}
+
+const LongDescriptionModalContent = ({content}: LongDescriptionModalContentProps) => (
+  <LongDescriptionWrapper>
+    {content}
+  </LongDescriptionWrapper>)
+
+const WorkExperience = ({ item }: WorkExperienceProps) => {
+  const { open } = useContext(ModalContext);
+
+  const handleOpenModal = useCallback(() => {
+    const view = renderRichText(item.longDescription as RenderRichTextData<any>)
+    open(() => <LongDescriptionModalContent content={view} />)
+  }, [item, open])
+
+  return <Wrapper>
+    <DatesContainer>
+      {item.from} - {item.to}
+    </DatesContainer>
+    <RoleCompanyContainer>
+      <b>{item.role}</b><br/>
+      Company: {item.company}
+    </RoleCompanyContainer>
+    <HorizontalRule/>
+    {item.description.raw && <DescriptionContainer>
+      {renderRichText(item.description as RenderRichTextData<any>)}
+    </DescriptionContainer>}
+    {item.longDescription?.raw && <ReadMoreButtonWrapper>
+      <button type="button" onClick={handleOpenModal}>read more</button>
+    </ReadMoreButtonWrapper>}
+  </Wrapper>
+}
 
 export default WorkExperience
