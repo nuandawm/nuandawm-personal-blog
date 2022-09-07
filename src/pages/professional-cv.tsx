@@ -33,6 +33,11 @@ const PersonalInformationWrapper = styled.div`
   padding: 20px;
 `
 
+const EasterEggLink = styled.a`
+  color: white;
+  text-decoration: none;
+`
+
 const personalInfoData = [{
   label: 'Date of birth',
   value: '05/03/1982'
@@ -145,7 +150,7 @@ const ProfessionalCVPage = ({data}: ProfessionalCVPageProps): JSX.Element => {
             <h4>Language skills</h4>
             <HorizontalRule spaced />
             <p>
-              Mother tongue(s): <b>ITALIAN</b>
+              Mother tongue: <b>ITALIAN</b>
             </p>
           </div>
 
@@ -153,7 +158,7 @@ const ProfessionalCVPage = ({data}: ProfessionalCVPageProps): JSX.Element => {
             <h4>Communication and interpersonal skills</h4>
             <HorizontalRule spaced />
             <p>
-              Good communication skills gained through my experience as a teacher in IT classes and through a working
+              Good communication skills learned through my experience as a teacher in IT classes and working
               in teams over the years.
             </p>
           </div>
@@ -162,9 +167,16 @@ const ProfessionalCVPage = ({data}: ProfessionalCVPageProps): JSX.Element => {
             <h4>Hobbies and interests</h4>
             <HorizontalRule spaced />
             <p>
-              Lindy Hop and Balboa Swing dancer.<br/>
-              Fan of any Physics and Mathematics topics.<br/>
-              Former bass guitar player.
+              Lindy Hop and Balboa Swing <EasterEggLink
+              href="https://www.facebook.com/royalswingfest/photos/t.747524408/847410925465643/"
+              target="_blank">dancer</EasterEggLink>.<br/>
+              Fan of any Physics and Mathematics <EasterEggLink
+              href="https://en.wikipedia.org/wiki/G2_(mathematics)"
+              target="_blank">
+              topics</EasterEggLink>.<br/>
+              Former bass guitar <EasterEggLink
+              href="https://www.facebook.com/gediarocks/photos/t.747524408/182958705070040/"
+              target="_blank">player</EasterEggLink>.
             </p>
           </div>
         </Wrapper>
