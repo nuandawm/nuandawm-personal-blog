@@ -208,7 +208,7 @@ export const query = graphql`
         }
       }
     }
-    allContentfulDigitalSkillArea {
+    allContentfulDigitalSkillArea(sort: {fields: priority, order: ASC}) {
       edges {
         node {
           areaName
