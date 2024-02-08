@@ -76,7 +76,7 @@ const WorkExperience = ({ item }: WorkExperienceProps) => {
 
   return <Wrapper>
     <DatesContainer>
-      {item.from} - {item.to}
+      {item.from} -  {item.to}
     </DatesContainer>
     <RoleCompanyContainer>
       <b>{item.role}</b><br/>
