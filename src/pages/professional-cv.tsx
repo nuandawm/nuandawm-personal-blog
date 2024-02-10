@@ -32,26 +32,6 @@ const PersonalInformationWrapper = styled.div`
   padding: 20px;
 `
 
-const LanguageTable = styled.table`
-  border-collapse: collapse;
-  border: 2px solid white;
-  text-align: center;
-`
-
-const LanguageTableHeading = styled.th`
-  padding: 5px 20px;
-`
-
-const LanguageTableRow = styled.tr`
-  
-`
-
-const LanguageTableCell = styled.td`
-  border: solid white;
-  border-width: 1px 0;
-  padding: 5px;
-`
-
 const EasterEggLink = styled.a`
   color: white;
   text-decoration: none;
@@ -170,35 +150,22 @@ const ProfessionalCVPage = ({data}: ProfessionalCVPageProps): JSX.Element => {
           <div>
             <h4>Language skills</h4>
             <HorizontalRule spaced />
+            <h5>Italian</h5>
             <p>
-              Mother tongue: <b>ITALIAN</b>
+              <ul>
+                <li>Mother tongue</li>
+              </ul>
             </p>
+            <h5>
+              English
+            </h5>
             <p>
-              Other languages:
-              <LanguageTable>
-                <LanguageTableRow>
-                  <th/>
-                  <LanguageTableHeading colSpan={2}>Understanding</LanguageTableHeading>
-                  <LanguageTableHeading colSpan={2}>Speaking</LanguageTableHeading>
-                  <LanguageTableHeading>Writing</LanguageTableHeading>
-                </LanguageTableRow>
-                <LanguageTableRow>
-                  <LanguageTableCell/>
-                  <LanguageTableCell>Listening</LanguageTableCell>
-                  <LanguageTableCell>Reading</LanguageTableCell>
-                  <LanguageTableCell>Spoken production</LanguageTableCell>
-                  <LanguageTableCell>Spoken interaction</LanguageTableCell>
-                  <LanguageTableCell/>
-                </LanguageTableRow>
-                <LanguageTableRow>
-                  <LanguageTableHeading>ENGLISH</LanguageTableHeading>
-                  <LanguageTableCell>B2</LanguageTableCell>
-                  <LanguageTableCell>B2</LanguageTableCell>
-                  <LanguageTableCell>B2</LanguageTableCell>
-                  <LanguageTableCell>B2</LanguageTableCell>
-                  <LanguageTableCell>B2</LanguageTableCell>
-                </LanguageTableRow>
-              </LanguageTable>
+              <ul>
+                <li>Listening - B2</li>
+                <li>Reading - B2</li>
+                <li>Speaking - B2</li>
+                <li>Writing - B2</li>
+              </ul>
             </p>
           </div>
 

@@ -88,6 +88,10 @@ const MobileCode = css`
   line-height: 21px !important;
 `;
 
+const MobileListItem = css`
+  margin-left: 1em;
+`;
+
 const DesktopH1 = css`
   font-family: "Alfa Slab One", serif;
   font-style: normal;
@@ -170,6 +174,10 @@ const DesktopCode = css`
   line-height: 24px !important;
 `;
 
+const DesktopListItem = css`
+  margin-left: 1em;
+`;
+
 const H1Style = css`
   ${MobileH1}
   @media (min-width: ${breakpoints.sm}) {
@@ -240,6 +248,13 @@ const CodeStyle = css`
   }
 `;
 
+const ListItemStyle = css`
+  ${MobileListItem}
+  @media (min-width: ${breakpoints.sm}) {
+    ${DesktopListItem}
+  }
+`
+
 const ButtonLabelStyle = css`
   font-family: "Fira Sans", sans-serif;
   font-style: normal;
@@ -285,6 +300,10 @@ const TypographyStyles = createGlobalStyle`
 
   code {
     ${CodeStyle}
+  }
+  
+  li {
+    ${ListItemStyle}
   }
 `;
 
