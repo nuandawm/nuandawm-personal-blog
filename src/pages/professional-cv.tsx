@@ -118,6 +118,8 @@ const ProfessionalCVPage = ({data}: ProfessionalCVPageProps): JSX.Element => {
               Physics - BSc<br/>
               Senior Front End Developer<br/>
               Mid Back End Developer<br/>
+              English language proficiency: Full professional<br/>
+              Currently based in Nottingham, UK<br/>
               <i>Visa sponsorship required</i>
             </p>
           </PersonalInformationWrapper>
@@ -174,7 +176,7 @@ const ProfessionalCVPage = ({data}: ProfessionalCVPageProps): JSX.Element => {
               href="https://en.wikipedia.org/wiki/G2_(mathematics)"
               target="_blank">
               topics</EasterEggLink>.<br/>
-              Former bass guitar <EasterEggLink
+              Bass guitar <EasterEggLink
               href="https://www.facebook.com/gediarocks/photos/t.747524408/182958705070040/"
               target="_blank">player</EasterEggLink>.
             </p>
