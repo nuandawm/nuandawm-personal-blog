@@ -65,7 +65,7 @@ const personalInfoData = [{
   value: 'Italian'
 }, {
   label: 'Phone',
-  value: '(+44) 07734454185'
+  value: '(+44) 07734 454185'
 }, {
   label: 'email',
   value: 'derossi.giuliano@gmail.com'
