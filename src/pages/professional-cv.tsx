@@ -17,7 +17,6 @@ import Modal, { ModalContext, ModalData } from '../components/Modal';
 
 const Wrapper = styled.main`
   display: grid;
-  
   grid-row-gap: 20px;
 `;
 
@@ -33,6 +32,26 @@ const PersonalInformationWrapper = styled.div`
   padding: 20px;
 `
 
+const LanguageTable = styled.table`
+  border-collapse: collapse;
+  border: 2px solid white;
+  text-align: center;
+`
+
+const LanguageTableHeading = styled.th`
+  padding: 5px 20px;
+`
+
+const LanguageTableRow = styled.tr`
+  
+`
+
+const LanguageTableCell = styled.td`
+  border: solid white;
+  border-width: 1px 0;
+  padding: 5px;
+`
+
 const EasterEggLink = styled.a`
   color: white;
   text-decoration: none;
@@ -46,7 +65,7 @@ const personalInfoData = [{
   value: 'Italian'
 }, {
   label: 'Phone',
-  value: '(+39) 3288422844'
+  value: '(+44) 07734454185'
 }, {
   label: 'email',
   value: 'derossi.giuliano@gmail.com'
@@ -153,6 +172,33 @@ const ProfessionalCVPage = ({data}: ProfessionalCVPageProps): JSX.Element => {
             <HorizontalRule spaced />
             <p>
               Mother tongue: <b>ITALIAN</b>
+            </p>
+            <p>
+              Other languages:
+              <LanguageTable>
+                <LanguageTableRow>
+                  <th/>
+                  <LanguageTableHeading colSpan={2}>Understanding</LanguageTableHeading>
+                  <LanguageTableHeading colSpan={2}>Speaking</LanguageTableHeading>
+                  <LanguageTableHeading>Writing</LanguageTableHeading>
+                </LanguageTableRow>
+                <LanguageTableRow>
+                  <LanguageTableCell/>
+                  <LanguageTableCell>Listening</LanguageTableCell>
+                  <LanguageTableCell>Reading</LanguageTableCell>
+                  <LanguageTableCell>Spoken production</LanguageTableCell>
+                  <LanguageTableCell>Spoken interaction</LanguageTableCell>
+                  <LanguageTableCell/>
+                </LanguageTableRow>
+                <LanguageTableRow>
+                  <LanguageTableHeading>English</LanguageTableHeading>
+                  <LanguageTableCell>B2</LanguageTableCell>
+                  <LanguageTableCell>B2</LanguageTableCell>
+                  <LanguageTableCell>B2</LanguageTableCell>
+                  <LanguageTableCell>B2</LanguageTableCell>
+                  <LanguageTableCell>B2</LanguageTableCell>
+                </LanguageTableRow>
+              </LanguageTable>
             </p>
           </div>
 
