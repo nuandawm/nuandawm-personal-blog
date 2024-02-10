@@ -191,7 +191,7 @@ const ProfessionalCVPage = ({data}: ProfessionalCVPageProps): JSX.Element => {
                   <LanguageTableCell/>
                 </LanguageTableRow>
                 <LanguageTableRow>
-                  <LanguageTableHeading>English</LanguageTableHeading>
+                  <LanguageTableHeading>ENGLISH</LanguageTableHeading>
                   <LanguageTableCell>B2</LanguageTableCell>
                   <LanguageTableCell>B2</LanguageTableCell>
                   <LanguageTableCell>B2</LanguageTableCell>
