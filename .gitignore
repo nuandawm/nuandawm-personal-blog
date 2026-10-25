@@ -84,3 +84,5 @@ coverage-ts/
 cypress/screenshots
 cypress/videos
 
+# Env vars file
+.env
