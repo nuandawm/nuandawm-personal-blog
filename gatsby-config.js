@@ -50,7 +50,13 @@ module.exports = {
       options: {
         spaceId: "qhr9jqw5jvsf",
         accessToken: process.env.CONTENTFUL_API_KEY,
-      }
-    }
+        contentTypeFilter: (contentType) =>
+          [
+            "workExperience",
+            "digitalSkillArea",
+            "educationAndTraining",
+          ].includes(contentType.sys.id),
+      },
+    },
   ],
 };
