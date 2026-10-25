@@ -185,13 +185,14 @@ const ProfessionalCVPage = ({data}: ProfessionalCVPageProps): JSX.Element => {
               Lindy Hop and Balboa Swing <EasterEggLink
               href="https://www.facebook.com/royalswingfest/photos/t.747524408/847410925465643/"
               target="_blank">dancer</EasterEggLink>.<br/>
-              Fan of any Physics and Mathematics <EasterEggLink
+              Interested in any Physics and Mathematics <EasterEggLink
               href="https://en.wikipedia.org/wiki/G2_(mathematics)"
               target="_blank">
               topics</EasterEggLink>.<br/>
               Bass guitar <EasterEggLink
               href="https://www.facebook.com/gediarocks/photos/t.747524408/182958705070040/"
               target="_blank">player</EasterEggLink>.
+              Passionate amateur climber.
             </p>
           </div>
         </Wrapper>
